@@ -1,0 +1,28 @@
+@import url("base.css");
+
+.pagination li{
+  float:left;
+  margin:30px 20px 100px 0px;
+  list-style: none;
+}
+
+.serch1{
+  margin:30px 0px 60px 0px;
+}
+
+.group_img_and_title{
+  display: inline-block;
+  border:10px;
+  padding:10px;
+  margin:20px;
+  border:dotted #26d0c9 4px;
+  border-radius: 15px;
+}
+
+.serch1,h1{
+  text-align:center;
+}
+
+.group_center{
+  text-align:center;
+}

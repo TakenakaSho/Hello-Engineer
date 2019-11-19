@@ -1,0 +1,70 @@
+@import url("base.css");
+
+* {
+  border: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+form {placeholder
+  color: white;
+  margin: 45px auto;
+  background: #26d0c9;
+  width: 347px;
+  text-align: center;
+  padding: 40px;
+  border-radius: 50px;
+}
+
+form > h2 {
+  color: #f4f4f4;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.7);
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+input {
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+  display: block;
+  width: 269px;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  outline: none;
+}
+
+input:focus {
+  background: rgba(0, 0, 0, 0.1);
+
+}
+
+button {
+  position: relative;
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 17px;
+  width: 270px;
+
+  border-radius: 6px;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  font-size: 1.2em;
+  background: #f26964;
+  color: #f4f4f4;
+  box-shadow: 0px 3px 0px #ab4b47;
+  cursor: pointer;
+}
+button:active {
+  top: 3px;
+  box-shadow: none;
+}
+
+#signup{
+  background-color: #26d0c9;
+  padding:10px;
+  text-align:center;
+}

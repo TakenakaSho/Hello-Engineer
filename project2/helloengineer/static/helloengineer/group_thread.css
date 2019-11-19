@@ -1,0 +1,38 @@
+@import url("base.css");
+
+.comments a:link{
+  color:black;
+}
+
+.comments a:visited{
+  color:black;
+}
+
+.comments {
+  display: inline-block;
+  position: relative; 
+  margin: 5px 0 20px 30px;
+  padding: 17px 13px;
+  border-radius: 20px;
+  background: #d7ebfe;
+  min-width :200px;
+  max-width :85%;
+}
+
+
+#blank{
+  display:block;
+}
+
+.comments p {
+  margin: 0;
+  padding: 0;
+}
+
+.form-group{
+  margin: 105px 0px 0px;
+}
+
+.btn-primary{
+  margin: 10px 40px 80px;
+}

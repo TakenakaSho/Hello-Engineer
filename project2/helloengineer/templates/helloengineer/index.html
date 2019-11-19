@@ -1,0 +1,28 @@
+{% extends 'helloengineer/base.html' %}
+
+{% block header %}
+{% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'helloengineer/index.css' %}">
+{% endblock %}
+
+{% block content %}
+  <div class="center">
+    <div class="sheet">
+      <h2>【使い方】</h2>
+      <div class="elem">
+        <h3 id="index_elem1">・エンジニアの会話をのぞいてみましょう</h3>
+        <p>グループ一覧から気になるグループをクリック</p>
+      </div>
+      <div class="elem">
+        <h3>・お話してみましょう</h3>
+        <p>ログインし、気になるグループをクリック</p>
+        <p>一番下の『投稿』ボタンをクリック</p>
+      </div>
+      <div class="elem">
+        <h3>・気になるグループがありませんか?</h3>
+        <p>ログインし、マイページをクリック</p>
+        <p>一番下のグループ作成をクリック</p>
+      </div>
+    </div>
+  </div>
+{% endblock %}

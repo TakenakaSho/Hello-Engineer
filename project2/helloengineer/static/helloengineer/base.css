@@ -1,0 +1,101 @@
+a {
+  text-decoration:none;
+}
+
+header a:visited{
+  color:white;
+}
+
+header li {
+  float:right;
+  list-style: none;
+  padding: 10px 20px;
+  vertical-align: top;
+}
+
+header {
+  background-color: #26d0c9;
+  color: #fff;
+  height: 50px;
+  font-family: 'Impact'
+}
+
+.header-logo {
+  font-size: 40px;
+}
+
+.headerbtn {
+  padding: 0.25em 0.5em;
+  margin: 5px;
+  background: #fd9535;/*背景色*/
+  border-bottom: solid 2px #d27d00;/*少し濃い目の色に*/
+  border-radius: 15px;
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+  font-weight: bold;
+}
+
+.headerbtn:active {
+  border-bottom: solid 2px #fd9535;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+}
+
+.op{
+  display:none;
+}
+
+header input[type=checkbox] {
+  display:none;
+}
+
+/*画像を処理*/
+.userimg{
+  width:180px;
+  height:180px;
+  margin:0px 20px;
+  border-radius:20px;
+}
+
+.groupimg{
+  width:300px;
+  height:250px;
+  margin:20px;
+  border-radius:20px;
+}
+
+@media screen and (max-width: 767px) { /*タブレット用とスマホ用*/
+.op{
+  display: block;
+  float: right;
+  list-style: none;
+  padding: 10px 5px;
+  margin:0px;
+  font-size: 20px;
+}
+
+header li{
+  display:none;
+}
+
+.headerbtn {
+  display:none;
+}
+
+#hum_op:checked ~ ul li{
+  display: block;
+
+}
+}
+
+@media screen and (max-width: 570px) {
+
+#hum_op:checked ~ .header-logo{
+  display: none;
+}
+}
+
+@media screen and (max-width: 330px) {
+
+.header-logo{
+  display: none;
+}
+}

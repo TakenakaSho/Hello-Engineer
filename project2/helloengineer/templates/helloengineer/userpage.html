@@ -1,0 +1,21 @@
+{% extends 'helloengineer/base.html' %}
+
+{% block header %}
+{% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'helloengineer/userpage.css' %}">
+{% endblock %}
+
+{% block content %}
+  <div class="profile_all">
+    <h2>{{ user.username }}のユーザーページ</h2>
+    {% if user.profile.user_img %}
+      <img class="userimg" src="{{ user.profile.user_img.url }}" alt="{{ video.title }}">
+    {% else %}
+      <img class="userimg" src="{% static 'helloengineer/img/user_defo.jpg' %}" alt="{{ video.title }}">
+    {% endif %}
+    <h3>年収：{{ user.profile.income }}</h3>
+    <h3>性別:{{ user.profile.get_gender_display }} </h3>
+    <h3>誕生日:{{ user.profile.birthday }}</h3>
+    <h3>自己紹介：{{ user.profile.intro }}</h3>
+  <div>
+{% endblock %}

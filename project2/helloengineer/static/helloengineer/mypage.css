@@ -1,0 +1,33 @@
+@import url("base.css");
+
+h2{
+  text-align:center;
+}
+
+.group_img_and_title{
+  display: inline-block;
+  border:10px;
+  padding:10px;
+  margin:20px;
+  border:dotted #26d0c9 4px;
+  border-radius: 15px;
+}
+
+.profile_all{
+  text-align:center;
+}
+
+.group_center{
+  text-align:center
+}
+
+.profile_update{
+  margin:50px 0px;
+  text-align:center;
+  background-color: #26d0c9;
+}
+
+.elem{
+  margin:20px;
+  display:inline-block;
+}

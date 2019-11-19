@@ -1,0 +1,30 @@
+{% extends 'helloengineer/base.html' %}
+
+{% block header %}
+{% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'helloengineer/group_list.css' %}">
+{% endblock %}
+
+{% block content %}
+  <h1>グループ一覧</h1>
+  <form class="serch1" method="GET" action="{% url 'helloengineer:group_list' %}">
+    <input class="serch2" type="text" placeholder="Search" aria-label="Search" name="keyword">
+    <button classs="searchbutton" type="submit">serach</button>
+  </form>
+  <div class="group_center">
+    {% for group in group_list %}
+      <div class="group_img_and_title"><a href="{% url 'helloengineer:group_thread' group.pk %}">
+        {% if group.group_img %}
+          <img class="groupimg" src="{{ group.group_img.url }}" alt="{{ group.title }}">
+        {% else %}
+          <img class="groupimg" src="{% static 'helloengineer/img/group_defo.jpg' %}" alt="{{ group.title }}">
+        {% endif %}
+          <h3>{{ group.title }}</h3>
+      </a>
+      </div>
+    {% endfor %}
+  </div>
+
+  {% include 'helloengineer/page.html' %}
+
+{% endblock %}

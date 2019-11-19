@@ -1,0 +1,28 @@
+@import url("base.css");
+
+.center{
+  display: block;
+  text-align:center;
+}
+
+.sheet{
+  display: inline-block;
+  border:solid 0.5px;
+  padding:0px;
+  margin:30px 0px 50px;
+  border-top: solid 5px #26d0c9;
+  width:auto;
+  max-width:500px;
+  border-radius: 15px;    
+}
+
+.elem{
+  margin:20px 20px;
+  border-top: solid 1px;
+  text-align:left ;
+  padding:10px;
+}
+
+.elem p{
+  margin:0px 0px 0px 30px;
+}

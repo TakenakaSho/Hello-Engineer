@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <title>Hello Engineer</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=yes">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+
+    {% block header %}
+    {% endblock %}
+  </head>
+  <header>
+    <div class="header">
+      <input type="checkbox" id="hum_op"><label class="op" for="hum_op">MENU</label>
+      <ul>
+        {% if user.id  %}
+          <li class="headerbtn"><a href="{% url 'helloengineer:mypage' user.pk %}">マイページ</a></li>
+        {% else %}
+          <li class="headerbtn"><a href="/helloengineer/login">ログイン</a></li>
+        {% endif %}
+        <li><a href="/helloengineer/group_list">グループ一覧</a></li>
+      </ul>
+      <div class="header-logo"><a href="/helloengineer">Hello Engineer</a></div>
+    </div>
+  </header>
+  <body>
+    {% block content %}
+    {% endblock %}
+  </body>
+</html>
+

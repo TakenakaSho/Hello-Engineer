@@ -1,0 +1,41 @@
+{% extends 'helloengineer/base.html' %}
+
+{% block header %}
+{% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'helloengineer/mypage.css' %}">
+{% endblock %}
+
+{% block content %}
+  <h2>{{ user.username }}のユーザーページ</h2>
+  <div class="profile_all">
+    {% if user.profile.user_img %}
+      <img class="userimg" src="{{ user.profile.user_img.url }}">
+    {% else %}
+      <img class="userimg" src="{% static 'helloengineer/img/user_defo.jpg' %}">
+    {% endif %}
+    <h3>年収：{{ user.profile.income }}</h3>
+    <h3>性別:{{ user.profile.get_gender_display }} </h3>
+    <h3>誕生日:{{ user.profile.birthday }}</h3>
+    <h3>自己紹介：{{ user.profile.intro }}</h3>
+  </div>
+  <div class="group_center">
+  {% for group in user.group_set.all %}
+    <div class="group_img_and_title"><a href="{% url 'helloengineer:group_thread' group.pk %}">
+      {% if group.group_img %}
+        <img class="groupimg" src="{{ group.group_img.url }}" alt="{{ group.title }}">
+      {% else %}
+        <img class="groupimg" src="{% static 'helloengineer/img/group_defo.jpg' %}" alt="{{ group.title }}">
+      {% endif %}
+      <h3>{{ group.title }}</h3>
+      <form method="post" action="{% url 'helloengineer:delete' group.pk %}">{% csrf_token %}
+        <button class="btn" type="submit" onclick='return confirm("本当に削除しますか？");'>{{ group.title }}を削除</button>
+      </form>
+    </div>
+  {% endfor %}
+  </div>
+  <div class="profile_update">
+    <div class="elem"><a href="/helloengineer/group_create">グループ作成</a><br></div>
+    <div class="elem"><a href="{% url 'helloengineer:profileupdate' user.pk %}">プロフィール更新</a></div>
+    <div class="elem"><a onclick='return confirm("本当にログアウトしますか？");' href="/helloengineer/logout">ログアウト</a><br></div>
+  </div>
+{% endblock %}

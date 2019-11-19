@@ -1,0 +1,16 @@
+{% extends 'helloengineer/base.html' %}
+
+{% block header %}
+{% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'helloengineer/signup.css' %}">
+{% endblock %}
+
+{% block content %}
+  <form action="{% url 'helloengineer:signup' %}" method="post">
+   {% csrf_token %}
+   <h2>新規登録</h2>
+   {{ form.as_p }}
+   <input type="submit" value="Sign Up">
+  </form>
+  <p id="login"><a href= "{% url 'helloengineer:login' %}">ログイン</a></p>
+{% endblock %}

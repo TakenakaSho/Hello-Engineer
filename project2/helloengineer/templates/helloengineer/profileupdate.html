@@ -1,0 +1,25 @@
+{% extends 'helloengineer/base.html' %}
+
+{% block header %}
+{% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'helloengineer/form.css' %}">
+{% endblock %}
+
+{% block content %}
+  <h2>プロフィールを更新しますか？</h2>
+  <div class="center">
+    <form method="POST" class="post-form" enctype="multipart/form-data">
+      <div class="sheet">
+        {% for field in form %}
+          <div class="elem">
+            {{ field.label }}:
+            {{ field }}
+          </div>
+        {% endfor %}
+        <button type="submit" class="create_button">更新</button>
+        {% csrf_token %}
+      </div>
+    </form>
+  </div>
+  <p><a href="{% url 'helloengineer:mypage' user.pk %}">マイページに戻る</a></p>
+{% endblock %}
