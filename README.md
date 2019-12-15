@@ -12,4 +12,6 @@ CRUD機能
 python3.6
 Django2.1.4
 さくらのVPS
+nginx
+
 
